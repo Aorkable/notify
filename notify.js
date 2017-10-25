@@ -1,7 +1,10 @@
 !(() => {
   // html模版
-  const template = `<section id="notify-container" class="notify-container">
+  const template = `<section id="notify-container" class="notify-container" >
                         <h3 class="notify-title"></h3>
+                        <close class="notify-close">
+                        <input type="button" class="button" value="关闭" onclick="target_dis()"/>
+                        </close>
                         <article class="notify-content"></article>
                       </section>`
 
@@ -58,7 +61,7 @@
       // 显示后经过一段时间自动隐藏
       if (opt.autoHide) {
         setTimeout(() => {
-          this.notify.style.display = 'none'
+          this.notify.style.display = 'block'//none
         }, opt.timeout)
       }
     }
@@ -80,3 +83,7 @@
   }
 
 })()
+function target_dis(){
+    var  target=document.getElementById("notify-container");
+    target.style.display="none";
+  }

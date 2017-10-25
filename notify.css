@@ -4,13 +4,43 @@
   border: 1px solid #ccc;
   border-radius: 4px;
   position: fixed;
-  top: 10px;
-  right: 5px;
-  /* display: none; */
+   /* 居中 */
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  
+ /* display: none; */
+  /*动画*/
+  -webkit-animation: first 4s;
+ 
+
 }
+@-webkit-keyframes first  {
+  from {color:palevioletred;     top: 300px; left:300px; right:600px; }
+  to {color: rgb(42, 133, 143);  top:0px; bottom: 0px; left: 0px;  right: 0px; }
+
+}
+
+
+
 .notify-title {
-  border-bottom: 1px solid #ddd;
+  border-bottom:solid 1px #000;
+  position: relative;
+  top: 4px;
+  text-align: center;
+ 
 }
 .notify-content {
-  padding-left: 5px;
+  padding-right: 5px;
+  text-align: center
+}
+
+.notify-close{
+  width:  42px;
+  height: 30px;
+  position:absolute;
+  top:0px;
+  right: 0px;
 }
